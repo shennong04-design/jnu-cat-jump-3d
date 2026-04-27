@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#00a6b8" />
+  <title>暨南猫咪跳一跳</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">JNU CAT JUMP</p>
+        <h1>暨南猫咪跳一跳</h1>
+      </div>
+      <button id="soundBtn" class="round-btn" type="button" aria-label="音效开关">🔇</button>
+    </header>
+
+    <section class="scorebar" aria-label="游戏状态">
+      <div class="score-card"><span>分数</span><strong id="score">0</strong></div>
+      <div class="score-card"><span>最高</span><strong id="best">0</strong></div>
+      <div class="score-card"><span>连击</span><strong id="combo">0</strong></div>
+      <div class="score-card wide"><span>建筑</span><strong id="buildingName">校门</strong></div>
+    </section>
+
+    <section class="cat-picker" aria-label="选择猫咪角色">
+      <button class="cat-chip active" data-cat="0" type="button"><img src="assets/cats/xiaoba.png" alt="校霸" /><span>校霸</span></button>
+      <button class="cat-chip" data-cat="1" type="button"><img src="assets/cats/aohei.png" alt="澳黑" /><span>澳黑</span></button>
+      <button class="cat-chip" data-cat="2" type="button"><img src="assets/cats/linlin.png" alt="琳琳" /><span>琳琳</span></button>
+      <button class="cat-chip" data-cat="3" type="button"><img src="assets/cats/meilimao.png" alt="没礼貌" /><span>没礼貌</span></button>
+    </section>
+
+    <section class="stage">
+      <canvas id="game" aria-label="暨南猫咪跳一跳游戏画布"></canvas>
+      <div id="screen" class="screen">
+        <div class="panel">
+          <div class="panel-cat-wrap">
+            <img id="panelCat" class="panel-cat" src="assets/cats/xiaoba.png" alt="当前猫咪角色" />
+          </div>
+          <h2 id="screenTitle">准备起跳</h2>
+          <p id="screenText">按住屏幕蓄力，松手让猫咪跳到暨南大学各校区建筑平台。猫咪有待机、蓄力、跳跃、落地活动动作。</p>
+          <button id="startBtn" class="primary" type="button">开始游戏</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="tips">
+      <p><strong>手机玩法：</strong>长按蓄力，松手起跳；越靠近建筑平台中心，得分越高。</p>
+      <p><strong>角色动作：</strong>待机呼吸、眨眼、摆动、蹲下蓄力、空中翻转、落地回弹、脚印粒子。</p>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

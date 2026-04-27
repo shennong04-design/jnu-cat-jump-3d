@@ -1,0 +1,17 @@
+{
+  "name": "暨南猫咪跳一跳",
+  "short_name": "暨南猫跳",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#e8faff",
+  "theme_color": "#00a6b8",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
